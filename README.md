@@ -7,6 +7,8 @@ The only flags now are --file, --url, --tokenPath
 
 You can use multiple --file and --url flags at once.
 
+- `npx @laduke/joiner --url http://example.com/work-networks.json --file ./home-networks.json --file test-networks.json`
+
 - `./bin.js --url http://example.com/work-networks.json --file ./home-networks.json --file test-networks.json`
 - `./bin.js --file ./none.json`
 
@@ -26,6 +28,7 @@ example.com/work-networks.json
 - [x] linter,formatter
 - [x] refarcter
 - [x] local file config
+- [ ] better error messages
 - [ ] logging
 - [ ] containerize
 - [ ] publish

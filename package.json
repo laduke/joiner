@@ -1,12 +1,13 @@
 {
   "name": "@laduke/joiner",
+  "repository": "github:laduke/joiner",
   "files": [
     "src",
     "bin.js",
     "README.md"
   ],
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "bin": "./bin.js",
   "scripts": {
     "start": "live-server --no-browser config",

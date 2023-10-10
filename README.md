@@ -1,6 +1,5 @@
 # configure zerotier nodes remotely
-![github action badge](https://github.com/laduke/joiner/actions/workflows/node.js.yml/badge.svg)
-
+[![Node.js CI](https://github.com/laduke/joiner/actions/workflows/node.yml/badge.svg)](https://github.com/laduke/joiner/actions/workflows/node.yml)
 Get a lists of zerotier networks from remote urls, join them, leave any other networks. Keep your device in sync without remembering all those network ids. 
 
 The only flags now are --file, --url, --tokenPath

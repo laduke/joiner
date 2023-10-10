@@ -1,6 +1,7 @@
 {
   "name": "@laduke/joiner",
   "type": "module",
+  "version": "0.0.1",
   "bin": {
     "joiner": "./bin.js"
   },

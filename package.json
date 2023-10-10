@@ -1,10 +1,13 @@
 {
   "name": "@laduke/joiner",
+  "files": [
+    "src",
+    "bin.js",
+    "README.md"
+  ],
   "type": "module",
-  "version": "0.0.1",
-  "bin": {
-    "joiner": "./bin.js"
-  },
+  "version": "0.0.2",
+  "bin": "./bin.js",
   "scripts": {
     "start": "live-server --no-browser config",
     "test": "NODE_NO_WARNINGS=1 node --loader=testdouble --test",

@@ -3,7 +3,7 @@
 
 Get a list of zerotier networks from remote urls, join them, and leave any other networks. Keep your device in sync without remembering all those network ids. 
 
-The only flags now are --file, --url, --tokenPath
+The only flags now are --file, --url, --tokenPath, --watch
 
 You can use multiple --file and --url flags at once.
 
@@ -16,6 +16,8 @@ You can provide networks on stdin
 See verbose more logs with env var
 
 - `LOG_LEVEL=debug npx @laduke/joiner`
+
+- `--watch<=5000>` will poll all files and urls every x ms for new config
 
 json format for now:
 

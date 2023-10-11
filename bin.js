@@ -2,11 +2,14 @@
 
 import App from './src/index.js'
 import { config as loadsConfig } from './src/loads-config.js'
+import { logger } from './src/logger.js'
+
+const { tokenPath, urls, files, watch } = loadsConfig()
 
 run()
 
 async function run () {
-  const { tokenPath, urls, files } = loadsConfig()
+  logger.debug('running')
 
   const config = { tokenPath, urls, files }
 
@@ -15,4 +18,9 @@ async function run () {
     console.log('error:')
     console.log(e)
   })
+
+  if (watch) {
+    await new Promise(resolve => setTimeout(resolve, watch))
+    run()
+  }
 }

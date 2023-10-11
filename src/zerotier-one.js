@@ -18,6 +18,7 @@ export async function join (config, network) {
   const { allowDefault, allowManaged, allowGlobal } = network
   const service = new Service({ authToken, port })
   return service.set(network.id, { allowDefault, allowManaged, allowGlobal })
+    .then(x => x.body.id)
     .catch(e => {
       throw new Error(`Error joining ${network.id} ${e.message}`)
     })
@@ -27,6 +28,7 @@ export async function leave (config, id) {
   const { localPort: port, authToken } = config
   const service = new Service({ authToken, port })
   const result = await service.leave(id)
+    .then(_ => id)
     .catch(e => {
       throw new Error(`Error leaving ${id} ${e.message}`)
     })

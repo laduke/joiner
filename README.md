@@ -29,6 +29,14 @@ example.com/work-networks.json
 }
 ```
 
+# use cases
+
+- switching contexts on your workstation 
+  - join client A's networks, leave client B's
+  - join test networks
+  - leave all networks
+- remotely controlling nodes; migrate them to new or additional networks, without user interaction
+- boot strap new vms onto networks
 
 # todo
 - [x] github action tests
@@ -46,4 +54,5 @@ example.com/work-networks.json
 - [ ] figure out a better shape for the config data
 - [ ] generate config from terraform output
 - [ ] port to static language
+- [ ] build into zerotier-one
 

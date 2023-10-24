@@ -15,9 +15,9 @@ export async function getNetworks (authToken, port) {
 
 export async function join (config, network) {
   const { localPort: port, authToken } = config
-  const { allowDefault, allowManaged, allowGlobal } = network
+  const { allowDefault, allowManaged, allowGlobal, allowDNS } = network
   const service = new Service({ authToken, port })
-  return service.set(network.id, { allowDefault, allowManaged, allowGlobal })
+  return service.set(network.id, { allowDefault, allowManaged, allowGlobal, allowDNS })
     .then(x => x.body.id)
     .catch(e => {
       throw new Error(`Error joining ${network.id} ${e.message}`)
